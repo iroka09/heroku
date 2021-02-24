@@ -1,0 +1,41 @@
+	 <% let name = req.params.name; %>
+
+<!DOCTYPE html>
+ <head>
+	 <title>Untitled</title>
+	 <meta charset="UTF-8"/>
+	 <link rel="stylesheet" href="" type="text/css"/>
+	 <meta name= "viewport" content= "width= device-width; initial-scale=1">
+	 <style>
+	 body{
+	     font-family: arial;
+	 }
+	 img{
+	 width: 100%
+	 }
+	 .me{
+	 width: 100px;
+	 height: 100px; 
+	 display:block;
+	 margin: 20px auto; 
+	 border-radius: 50%;
+	 object-fit: cover;
+	 border: 1px solid #aaa; 
+	 }
+	 </style>
+ </head>
+	 <body>
+	     
+	 	 <% if(name.match(/^iroka$/i)){ %>
+	 <img class="me" src="/me1.jpg"/>
+	 
+	Name is <%= name %>, he's <%= age %> years old. <br>
+	Exported school: <%= exported %>
+	<br>
+	Heroku school:  <%= heroku %>
+	<%} else {%>
+	<h2>Sorry only Iroka is allowed. </h2>
+	<%}%>
+	
+	 </body>
+ </html>
