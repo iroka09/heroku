@@ -12,18 +12,14 @@ console.log(e||"Listening on port: "+port)
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-/*
+
 app.use(express.static("./client", {
     dotFiles: "ignore",
     index: ["index.html", "index.htm"],
     redirect: false,
 }));
-*/
 
-app.get("/", (req,res)=>{
-    res.header("text/html");
-    res.send("<a href='/ejs'>GO TO EJS</a>")
-})
+
 
 app.get("/ejs", (req,res)=>{
     res.header("text/html");
