@@ -32,6 +32,8 @@ app.get("/:name/:year", (req,res)=>{
         req, 
         age: new Date().getFullYear() - req.params.year,
         exported: process.env.exported,
-        heroku: process.env.heroku
+        heroku: process.env.heroku,
+        redis: process.env.REDIS_URL,
+        mongo: process.env.MONGODB_URI
     })
 })
